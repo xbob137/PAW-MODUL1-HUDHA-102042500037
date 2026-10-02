@@ -1,0 +1,505 @@
+
+:root {
+    --biru: #1d4ed8;
+    --biru-tua: #172554;
+    --biru-muda: #eff4ff;
+    --teks: #1e293b;
+    --abu: #64748b;
+    --garis: #e2e8f0;
+    --latar: #f8fafc;
+    --hijau: #15803d;
+    --hijau-muda: #dcfce7;
+    --merah: #b91c1c;
+    --merah-muda: #fee2e2;
+    --promo: #ea580c;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    color: var(--teks);
+    background: var(--latar);
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid var(--garis);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--biru-tua);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--biru);
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--abu);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.menu a:hover {
+    color: var(--biru);
+}
+
+.hero {
+    background: var(--biru-tua);
+    color: #fff;
+    padding: 72px 0;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 640px;
+}
+
+.hero p {
+    margin-top: 16px;
+    max-width: 520px;
+    color: #c7d6fe;
+    font-size: 1.05rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 28px;
+    background: #fff;
+    color: var(--biru-tua);
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-hero:hover {
+    background: var(--biru-muda);
+}
+
+.info {
+    margin-top: -28px;
+    position: relative;
+}
+
+.info-box {
+    background: #fff;
+    border: 1px solid var(--garis);
+    border-radius: var(--radius);
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 16px rgba(23, 37, 84, 0.08);
+}
+
+.info-item {
+    flex: 1 1 200px;
+    padding: 20px 24px;
+}
+
+.info-item + .info-item {
+    border-left: 1px solid var(--garis);
+}
+
+.info-item strong {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--biru);
+    line-height: 1.2;
+}
+
+.info-item span {
+    color: var(--abu);
+    font-size: 0.9rem;
+}
+
+.katalog {
+    padding: 56px 0 72px;
+}
+
+.katalog h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--biru-tua);
+}
+
+.katalog .sub {
+    color: var(--abu);
+    margin: 4px 0 28px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--garis);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.card.habis {
+    background: #fbfbfc;
+}
+
+.card.habis .nama,
+.card.habis .harga {
+    color: var(--abu);
+}
+
+.badge-diskon {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    background: var(--promo);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    z-index: 1;
+}
+
+.kategori {
+    align-self: flex-start;
+    background: var(--biru-muda);
+    color: var(--biru);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+.nama {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    min-height: 3em;
+}
+
+.harga-wrap {
+    min-height: 64px;
+}
+
+.harga-normal {
+    font-size: 0.9rem;
+    color: var(--abu);
+    text-decoration: line-through;
+}
+
+.harga {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--biru-tua);
+}
+
+.harga.promo {
+    color: var(--promo);
+}
+
+.stok-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--abu);
+}
+
+.status {
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+.status.tersedia {
+    background: var(--hijau-muda);
+    color: var(--hijau);
+}
+
+.status.habis {
+    background: var(--merah-muda);
+    color: var(--merah);
+}
+
+.btn-beli {
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: var(--biru);
+    color: #fff;
+    font: 700 0.95rem "Plus Jakarta Sans", sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-beli:hover {
+    background: var(--biru-tua);
+}
+
+.btn-beli:focus-visible {
+    outline: 3px solid #93b4ff;
+    outline-offset: 2px;
+}
+
+.btn-beli:disabled {
+    background: var(--garis);
+    color: var(--abu);
+    cursor: not-allowed;
+}
+
+.footer {
+    background: var(--biru-tua);
+    color: #c7d6fe;
+    padding: 32px 0;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer strong {
+    color: #fff;
+}
+
+@media (max-width: 720px) {
+    .menu {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 48px 0;
+    }
+
+    .info-item + .info-item {
+        border-left: none;
+        border-top: 1px solid var(--garis);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.foto {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.foto-kosong {
+    font-size: 64px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.keranjang {
+    background: var(--biru-muda);
+    color: var(--biru);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+.modal {
+    border: none;
+    border-radius: var(--radius);
+    padding: 28px;
+    width: min(420px, 92%);
+    margin: auto;
+    color: var(--teks);
+    font-family: inherit;
+}
+
+.modal::backdrop {
+    background: rgba(23, 37, 84, 0.55);
+}
+
+.modal h3 {
+    font-size: 1.25rem;
+    color: var(--biru-tua);
+    margin-bottom: 12px;
+}
+
+.modal-produk {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.modal-harga,
+.modal-stok {
+    color: var(--abu);
+    font-size: 0.9rem;
+}
+
+.qty-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0 4px;
+    font-weight: 600;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.qty button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--biru-muda);
+    color: var(--biru);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.qty button:hover {
+    background: #dbe6ff;
+}
+
+.qty input {
+    width: 48px;
+    height: 36px;
+    border: none;
+    text-align: center;
+    font: 700 1rem "Plus Jakarta Sans", sans-serif;
+    color: var(--teks);
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.qty input::-webkit-outer-spin-button,
+.qty input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--garis);
+}
+
+.total-row strong {
+    font-size: 1.3rem;
+    color: var(--biru-tua);
+}
+
+.modal-aksi {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-aksi .btn-beli {
+    margin-top: 0;
+}
+
+.btn-batal {
+    flex: 0 0 auto;
+    padding: 11px 20px;
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--abu);
+    font: 600 0.95rem "Plus Jakarta Sans", sans-serif;
+    cursor: pointer;
+}
+
+.btn-batal:hover {
+    background: var(--latar);
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%, 24px);
+    background: var(--hijau);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 100;
+    max-width: 90%;
+    text-align: center;
+}
+
+.toast.tampil {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
